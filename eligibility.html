@@ -1,0 +1,360 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donation Eligibility - BloodLink Rescue Network</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/styles.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><span class="text-danger fw-bold">Blood</span><span class="text-success">Link</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="eligibility.html">Eligibility</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="donate.html">Donate</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <a href="login.html" class="btn btn-outline-danger me-2">Login</a>
+                    <a href="register.html" class="btn btn-danger">Register</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Page Header -->
+    <div class="bg-light py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-3">Eligibility Requirements</h1>
+                    <p class="lead mb-4">Find out if you're eligible to donate blood and help save lives.</p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="EligibilityPic.png" alt="Eligibility Check" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Eligibility Checker Tool -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow mb-5">
+                        <div class="card-body p-4">
+                            <h3 class="text-center mb-4">Check Your Eligibility</h3>
+                            <p class="text-center text-muted mb-4">Use our simple tool to check if you're eligible to donate blood before registering or visiting a donation center.</p>
+                            
+                            <form id="eligibilityForm" class="needs-validation" novalidate>
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <label for="eligibility-age" class="form-label">Your Age</label>
+                                        <input type="number" class="form-control" id="eligibility-age" min="16" max="120" required>
+                                        <div class="form-text">You must be at least 18 years old to donate.</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="eligibility-weight" class="form-label">Your Weight (kg)</label>
+                                        <input type="number" class="form-control" id="eligibility-weight" min="40" max="300" required>
+                                        <div class="form-text">You must weigh at least 50kg (110lbs).</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="eligibility-lastDonation" class="form-label">Last Donation Date (if any)</label>
+                                    <input type="date" class="form-control" id="eligibility-lastDonation">
+                                    <div class="form-text">You must wait at least 56 days between whole blood donations.</div>
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <label class="form-label mb-3">Do you have any of these medical conditions?</label>
+                                    
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" name="medicalCondition" value="blood-pressure" id="condition-bp">
+                                        <label class="form-check-label" for="condition-bp">
+                                            Uncontrolled high blood pressure
+                                        </label>
+                                    </div>
+                                    
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" name="medicalCondition" value="anemia" id="condition-anemia">
+                                        <label class="form-check-label" for="condition-anemia">
+                                            Iron deficiency anemia
+                                        </label>
+                                    </div>
+                                    
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" name="medicalCondition" value="pregnancy" id="condition-pregnancy">
+                                        <label class="form-check-label" for="condition-pregnancy">
+                                            Currently pregnant or recently given birth (last 6 weeks)
+                                        </label>
+                                    </div>
+                                    
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" name="medicalCondition" value="recent-surgery" id="condition-surgery">
+                                        <label class="form-check-label" for="condition-surgery">
+                                            Major surgery in the last 3 months
+                                        </label>
+                                    </div>
+                                    
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="medicalCondition" value="infectious-disease" id="condition-infectious">
+                                        <label class="form-check-label" for="condition-infectious">
+                                            Active infectious disease
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <div class="d-grid">
+                                    <button type="button" class="btn btn-danger" onclick="checkEligibility()">Check Eligibility</button>
+                                </div>
+                            </form>
+                            
+                            <div id="eligibility-result" class="mt-4">
+                                <!-- Results will appear here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Basic Requirements -->
+    <section class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Basic Eligibility Requirements</h2>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="h5 card-title mb-3">Age Requirements</h3>
+                            <p class="card-text">You must be at least 18 years old to donate blood through BloodLink. In some states, 16-17 year olds may donate with parental consent.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="h5 card-title mb-3">Weight Requirements</h3>
+                            <p class="card-text">You must weigh at least 50kg (110 lbs) to be eligible to donate blood. This requirement helps ensure donor safety.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="h5 card-title mb-3">Health Status</h3>
+                            <p class="card-text">You should be in good general health and feeling well on the day of donation. Specific health conditions may affect eligibility.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Donation Process -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">The Donation Process</h2>
+            
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="eligibility-step">
+                        <h3 class="h5">1. Registration</h3>
+                        <p>You'll need to complete a donor registration form and provide identification.</p>
+                    </div>
+                    
+                    <div class="eligibility-step">
+                        <h3 class="h5">2. Health History & Mini-Physical</h3>
+                        <p>A trained staff member will ask you confidential questions about your health history and check your temperature, blood pressure, pulse, and hemoglobin level.</p>
+                    </div>
+                    
+                    <div class="eligibility-step">
+                        <h3 class="h5">3. Blood Donation</h3>
+                        <p>The actual blood donation typically takes about 8-10 minutes, during which approximately 450ml (one pint) of blood is drawn.</p>
+                    </div>
+                    
+                    <div class="eligibility-step">
+                        <h3 class="h5">4. Refreshments & Recovery</h3>
+                        <p>After donating, you'll be invited to rest and enjoy refreshments for 15-20 minutes before leaving.</p>
+                    </div>
+                    
+                    <div class="eligibility-step">
+                        <h3 class="h5">5. Post-Donation Care</h3>
+                        <p>Drink plenty of fluids, avoid strenuous activities for the rest of the day, and keep the bandage on for several hours.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Frequently Asked Questions</h2>
+            
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="accordion" id="eligibilityFAQ">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                    How often can I donate blood?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#eligibilityFAQ">
+                                <div class="accordion-body">
+                                    You can donate whole blood every 56 days (about 8 weeks). If you donate platelets, you can donate more frequently - up to 24 times per year.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                    Can I donate if I'm taking medication?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#eligibilityFAQ">
+                                <div class="accordion-body">
+                                    Many medications do not prevent you from donating blood. However, the eligibility depends on the medication and the condition being treated. Common medications like blood pressure medicine, birth control pills, and hormone replacement therapy typically don't affect eligibility.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                    Can I donate if I have diabetes?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#eligibilityFAQ">
+                                <div class="accordion-body">
+                                    People with diabetes are eligible to donate if their diabetes is well-controlled with diet or oral medication. Those who use insulin may be eligible if their diabetes is stable.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                                    Can I donate if I've recently had a tattoo or piercing?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#eligibilityFAQ">
+                                <div class="accordion-body">
+                                    If you got your tattoo or piercing at a state-regulated facility, you can typically donate after 3 months. If the facility was not state-regulated, a 12-month waiting period may be required.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+                                    Does donating blood hurt?
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#eligibilityFAQ">
+                                <div class="accordion-body">
+                                    You might feel a slight pinch when the needle is inserted, but the actual donation process should not be painful. Our trained staff works to make the experience as comfortable as possible.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Call to Action -->
+    <section class="cta-section py-5">
+        <div class="container text-center">
+            <h2 class="display-5 fw-bold text-white mb-4">Ready to Save Lives?</h2>
+            <p class="lead text-white mb-4">If you meet the eligibility requirements, take the next step!</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="register.html" class="btn btn-light btn-lg px-5">Register Now</a>
+                <a href="donate.html" class="btn btn-outline-light btn-lg px-5">Find Donation Centers</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-5 bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <h5 class="text-white">BloodLink</h5>
+                    <p class="text-light">Connecting donors and recipients for a healthier tomorrow.</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 class="text-white">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-light">Home</a></li>
+                        <li><a href="eligibility.html" class="text-light">Eligibility</a></li>
+                        <li><a href="donate.html" class="text-light">Donate</a></li>
+                        <li><a href="about.html" class="text-light">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 class="text-white">For Hospitals</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="hospital-register.html" class="text-light">Register Hospital</a></li>
+                        <li><a href="hospital-login.html" class="text-light">Hospital Login</a></li>
+                        <li><a href="request-blood.html" class="text-light">Request Blood</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 class="text-white">Contact</h5>
+                    <ul class="list-unstyled text-light">
+                        <li>Email: info@bloodlink.org</li>
+                        <li>Phone: +1 (555) 123-4567</li>
+                        <li>Emergency: +1 (555) 987-6543</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="text-light">© 2025 BloodLink Rescue Network. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="text-light">Made with <i class="fas fa-heart text-danger"></i> for a better world</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/scripts.js"></script>
+</body>
+</html>

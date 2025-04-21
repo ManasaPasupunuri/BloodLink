@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Blood - BloodLink Rescue Network</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/styles.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><span class="text-danger fw-bold">Blood</span><span class="text-success">Link</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="eligibility.html">Eligibility</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="donate.html">Donate</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <a href="login.html" class="btn btn-outline-danger me-2">Login</a>
+                    <a href="register.html" class="btn btn-danger">Register</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h1 class="display-4 fw-bold mb-3">Donate Blood Today</h1>
+                    <p class="lead mb-4">Your donation is urgently needed. Schedule an appointment or find a donation center near you.</p>
+                    <div class="d-grid gap-3 d-md-flex justify-content-md-start">
+                        <a href="#schedule" class="btn btn-light btn-lg px-4 me-md-2 fw-bold">
+                            Schedule Now <i class="fas fa-calendar-alt ms-2"></i>
+                        </a>
+                        <a href="#locations" class="btn btn-outline-light btn-lg px-4">
+                            Find Centers <i class="fas fa-map-marker-alt ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6 d-none d-md-block">
+                    <img src="DonateBlood.png" alt="Blood Donation Process" class="img-fluid rounded shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Alerts -->
+    <section class="emergency-alert py-3">
+        <div class="container">
+            <div class="d-flex flex-column flex-md-row align-items-center justify-content-center">
+                <div class="d-flex align-items-center me-md-4 mb-2 mb-md-0">
+                    <i class="fas fa-clock pulse-icon me-2"></i>
+                    <span class="fw-bold text-white">URGENT:</span>
+                </div>
+                <ul class="list-unstyled d-flex flex-column flex-md-row mb-0 ms-0 ms-md-3">
+                    <li class="me-0 me-md-4 mb-2 mb-md-0 d-flex align-items-center">
+                        <i class="fas fa-tint me-2"></i>
+                        <span>Critical shortage of O- blood</span>
+                    </li>
+                    <li class="d-flex align-items-center">
+                        <i class="fas fa-tint me-2"></i>
+                        <span>Low inventory of B+ blood</span>
+                    </li>
+                </ul>
+                <a href="#schedule" class="btn btn-outline-light ms-0 ms-md-auto mt-2 mt-md-0">Donate Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Process -->
+    <section class="donation-process py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">The Donation Process</h2>
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="process-icon bg-danger bg-opacity-10 p-3 rounded-circle mb-3 mx-auto">
+                                <i class="fas fa-clipboard-check text-danger fa-2x"></i>
+                                <div class="process-number">1</div>
+                            </div>
+                            <h3 class="h5">Registration</h3>
+                            <p class="text-muted">Sign in, complete health history questionnaire, and receive a mini-physical.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="process-icon bg-danger bg-opacity-10 p-3 rounded-circle mb-3 mx-auto">
+                                <i class="fas fa-stethoscope text-danger fa-2x"></i>
+                                <div class="process-number">2</div>
+                            </div>
+                            <h3 class="h5">Health Screening</h3>
+                            <p class="text-muted">Quick check of temperature, blood pressure, pulse, and hemoglobin levels.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="process-icon bg-danger bg-opacity-10 p-3 rounded-circle mb-3 mx-auto">
+                                <i class="fas fa-tint text-danger fa-2x"></i>
+                                <div class="process-number">3</div>
+                            </div>
+                            <h3 class="h5">Donation</h3>
+                            <p class="text-muted">The actual donation takes only 8-10 minutes with the entire process lasting about an hour.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="process-icon bg-danger bg-opacity-10 p-3 rounded-circle mb-3 mx-auto">
+                                <i class="fas fa-cookie-bite text-danger fa-2x"></i>
+                                <div class="process-number">4</div>
+                            </div>
+                            <h3 class="h5">Refreshments</h3>
+                            <p class="text-muted">Enjoy snacks and drinks while resting for 15 minutes before leaving.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Appointment -->
+    <section id="schedule" class="schedule-section py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card border-0 shadow">
+                        <div class="card-body p-4 p-md-5">
+                            <h2 class="text-center mb-4">Schedule Your Donation</h2>
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="firstName" class="form-label">First Name</label>
+                                        <input type="text" class="form-control" id="firstName" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="lastName" class="form-label">Last Name</label>
+                                        <input type="text" class="form-control" id="lastName" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="phone" class="form-label">Phone Number</label>
+                                        <input type="tel" class="form-control" id="phone" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="bloodType" class="form-label">Blood Type (if known)</label>
+                                        <select class="form-select" id="bloodType">
+                                            <option value="" selected>Unknown</option>
+                                            <option value="A+">A+</option>
+                                            <option value="A-">A-</option>
+                                            <option value="B+">B+</option>
+                                            <option value="B-">B-</option>
+                                            <option value="AB+">AB+</option>
+                                            <option value="AB-">AB-</option>
+                                            <option value="O+">O+</option>
+                                            <option value="O-">O-</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="donationCenter" class="form-label">Donation Center</label>
+                                        <select class="form-select" id="donationCenter" required>
+                                            <option value="" selected disabled>Select Center</option>
+                                            <option value="center1">Main Downtown Center</option>
+                                            <option value="center2">Westside Medical Plaza</option>
+                                            <option value="center3">Northridge Community Hospital</option>
+                                            <option value="center4">Eastland Medical Center</option>
+                                            <option value="center5">Mobile Blood Drive Unit</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="donationDate" class="form-label">Preferred Date</label>
+                                        <input type="date" class="form-control" id="donationDate" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="donationTime" class="form-label">Preferred Time</label>
+                                        <select class="form-select" id="donationTime" required>
+                                            <option value="" selected disabled>Select Time</option>
+                                            <option value="9:00">9:00 AM</option>
+                                            <option value="10:00">10:00 AM</option>
+                                            <option value="11:00">11:00 AM</option>
+                                            <option value="12:00">12:00 PM</option>
+                                            <option value="13:00">1:00 PM</option>
+                                            <option value="14:00">2:00 PM</option>
+                                            <option value="15:00">3:00 PM</option>
+                                            <option value="16:00">4:00 PM</option>
+                                            <option value="17:00">5:00 PM</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="additionalInfo" class="form-label">Additional Information</label>
+                                        <textarea class="form-control" id="additionalInfo" rows="3"></textarea>
+                                    </div>
+                                    <div class="col-12 mt-4">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="firstTime">
+                                            <label class="form-check-label" for="firstTime">
+                                                This is my first time donating
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mt-4">
+                                        <button class="btn btn-danger btn-lg w-100" type="submit">Schedule Appointment</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Centers -->
+    <section id="locations" class="locations-section py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Donation Centers</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <h3 class="h5 mb-3">Main Downtown Center</h3>
+                            <p class="text-muted mb-2"><i class="fas fa-map-marker-alt me-2"></i>123 Main Street, Downtown</p>
+                            <p class="text-muted mb-2"><i class="fas fa-phone me-2"></i>(555) 123-4567</p>
+                            <p class="text-muted mb-3"><i class="fas fa-clock me-2"></i>Mon-Fri 8AM-6PM, Sat 9AM-3PM</p>
+                            <a href="#" class="btn btn-outline-danger btn-sm">View Map</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <h3 class="h5 mb-3">Westside Medical Plaza</h3>
+                            <p class="text-muted mb-2"><i class="fas fa-map-marker-alt me-2"></i>456 West Avenue, Westside</p>
+                            <p class="text-muted mb-2"><i class="fas fa-phone me-2"></i>(555) 987-6543</p>
+                            <p class="text-muted mb-3"><i class="fas fa-clock me-2"></i>Mon-Fri 9AM-5PM, Sat 10AM-2PM</p>
+                            <a href="#" class="btn btn-outline-danger btn-sm">View Map</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <h3 class="h5 mb-3">Northridge Community Hospital</h3>
+                            <p class="text-muted mb-2"><i class="fas fa-map-marker-alt me-2"></i>789 North Blvd, Northridge</p>
+                            <p class="text-muted mb-2"><i class="fas fa-phone me-2"></i>(555) 456-7890</p>
+                            <p class="text-muted mb-3"><i class="fas fa-clock me-2"></i>Mon-Fri 7AM-7PM, Sat-Sun 8AM-4PM</p>
+                            <a href="#" class="btn btn-outline-danger btn-sm">View Map</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <h3 class="h5 mb-3">Eastland Medical Center</h3>
+                            <p class="text-muted mb-2"><i class="fas fa-map-marker-alt me-2"></i>321 East Road, Eastland</p>
+                            <p class="text-muted mb-2"><i class="fas fa-phone me-2"></i>(555) 789-0123</p>
+                            <p class="text-muted mb-3"><i class="fas fa-clock me-2"></i>Mon-Sat 8AM-6PM</p>
+                            <a href="#" class="btn btn-outline-danger btn-sm">View Map</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <h3 class="h5 mb-3">Southpoint Health Center</h3>
+                            <p class="text-muted mb-2"><i class="fas fa-map-marker-alt me-2"></i>654 South Lane, Southpoint</p>
+                            <p class="text-muted mb-2"><i class="fas fa-phone me-2"></i>(555) 234-5678</p>
+                            <p class="text-muted mb-3"><i class="fas fa-clock me-2"></i>Mon-Fri 9AM-5PM</p>
+                            <a href="#" class="btn btn-outline-danger btn-sm">View Map</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm border-danger">
+                        <div class="card-body p-4">
+                            <div class="ribbon ribbon-top-right"><span>Mobile</span></div>
+                            <h3 class="h5 mb-3">Mobile Blood Drive Unit</h3>
+                            <p class="text-muted mb-2"><i class="fas fa-map-marker-alt me-2"></i>Various Locations</p>
+                            <p class="text-muted mb-2"><i class="fas fa-phone me-2"></i>(555) 345-6789</p>
+                            <p class="text-muted mb-3"><i class="fas fa-info-circle me-2"></i>Check calendar for schedule</p>
+                            <a href="#" class="btn btn-outline-danger btn-sm">View Calendar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Frequently Asked Questions</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    How often can I donate blood?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Whole blood donors can donate every 56 days (8 weeks). Platelet donors can donate up to 24 times per year. Power Red donors can donate every 112 days (16 weeks).
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    How long does the donation process take?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    The entire blood donation process takes about one hour, though the actual blood collection only takes about 8-10 minutes. The process includes registration, health history, mini-physical, donation, and refreshments.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Is donating blood safe?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, donating blood is very safe. All equipment used is sterile and disposed of after a single use. The average adult has about 10 pints of blood, and only 1 pint is taken during a donation.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    What should I do before donating blood?
+                                </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Get plenty of sleep, eat a healthy meal, drink extra water, and avoid fatty foods before donating. Wear clothing with sleeves that can be raised above the elbow. Bring your donor card, driver's license, or two other forms of identification.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    What are the different types of donations?
+                                </button>
+                            </h2>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    There are several types of donations: whole blood (most common), platelet donation, plasma donation, and Power Red (double red cell) donation. Each type helps different kinds of patients and has different requirements.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section py-5">
+        <div class="container text-center">
+            <h2 class="display-5 fw-bold text-white mb-4">Every Drop Counts</h2>
+            <p class="lead text-white mb-4">Your donation can save up to three lives. Join our cause today!</p>
+            <a href="#schedule" class="btn btn-light btn-lg px-5">Donate Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-5 bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <h5 class="text-white">BloodLink</h5>
+                    <p class="text-light">Connecting donors and recipients for a healthier tomorrow.</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 class="text-white">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-light">Home</a></li>
+                        <li><a href="eligibility.html" class="text-light">Eligibility</a></li>
+                        <li><a href="donate.html" class="text-light">Donate</a></li>
+                        <li><a href="about.html" class="text-light">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 class="text-white">For Hospitals</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="hospital-register.html" class="text-light">Register Hospital</a></li>
+                        <li><a href="hospital-login.html" class="text-light">Hospital Login</a></li>
+                        <li><a href="request-blood.html" class="text-light">Request Blood</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5 class="text-white">Contact</h5>
+                    <ul class="list-unstyled text-light">
+                        <li>Email: info@bloodlink.org</li>
+                        <li>Phone: +1 (555) 123-4567</li>
+                        <li>Emergency: +1 (555) 987-6543</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="text-light">© 2025 BloodLink Rescue Network. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="text-light">Made with <i class="fas fa-heart text-danger"></i> for a better world</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/scripts.js"></script>
+</body>
+</html>
